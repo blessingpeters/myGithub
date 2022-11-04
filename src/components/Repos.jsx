@@ -10,15 +10,20 @@ function Repos({currentRepo}){
             {currentRepo.map((repo) => (
                 <Link key={repo.id} className="repo flex" to={`repo/${repo.name}`}> 
                    
-                    <div className="flex">
-                        <h2>{repo.name}</h2>
-                        <ExternalLink />
-                    </div> 
+                    <div className="repo-header">
+                        <div className="flex repo-name"> 
+                            <h2>{repo.name}</h2>
+                            
+                            <ExternalLink />
+                        </div>
+                        
+                        <p className="repo-description">{repo.description}</p>
+                    </div>
                     
-
-                    <p>{repo.description}</p>
-
-                    <div className="flex repo-item-cont">
+                    <div className="flex repo-item-cont">                        
+                        <div className="repo-items flex">
+                            <p>{repo.visibility}</p>
+                        </div>
                         <div className="repo-items flex">
                             <Fork/> <p>{repo.forks}</p>
                         </div>
@@ -28,11 +33,6 @@ function Repos({currentRepo}){
                         <div className="repo-items flex">
                             <p>{repo.language}</p>
                         </div>
-                        <div className="repo-items flex">
-                            <p>{repo.visibility}</p>
-                        </div>
-
-                        
                     </div>
                     
                   

@@ -34,7 +34,6 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .menu {
   color: #002147;
   margin-left:  25px ;
@@ -56,42 +55,49 @@ button {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex-direction: column;
 }
+.repo-name h2 {
+  width: 85%;
+}
+.repo-description {
+  margin-top: 13px;
+}
 .repo-items{
   color: #fff;
   align-items: center;
   font-size: 14px ;
   border-radius: 20px;
-  padding: 8px 10px ;
+  padding: 8px 13px ;
 }
 .repo-items p{
  margin: 0 5px;
 }
 .repo-items:nth-child(2n +1){
-  background-color: rgba(0, 125, 86, 1);
+  background-color:rgba(0, 33, 71, 1);
 }
 .repo-items:nth-child(2n +2){
-  background-color:rgba(127, 215, 123, 1);
+  background-color: rgba(0, 125, 86, 1);
 }
 .repo-items:nth-child(2n +3){
+  background-color:rgba(127, 215, 123, 1);
+}
+.repo-items:nth-child(2n +4){
   background-color: rgba(163, 62, 61, 0.6);
 }
 
-.repo-items:nth-child(2n +4){
-  background-color:rgba(0, 33, 71, 1);
-}
+
 .repo-page {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 20px 0; */
+  width: 70%;
+  margin: 0 auto;
 }
 .repo-page p, .repo-page a{
   margin: 12px 0;
 }
 .repo-page button {
   padding: 10px 20px;
-
+}
+.btn-cont {
+  align-items: center;
+  
 }
 .error-cont{
   text-align: center;
@@ -144,7 +150,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin: 30px 0;
+  margin: 35px 0 20px;
 }
 
 .pagination-num {
@@ -187,7 +193,7 @@ button {
 }
 
 
-@media (max-width: 990px){
+@media (max-width: 1050px){
   .container {
     padding: 0 5%;
     max-width: 900px;
@@ -203,6 +209,10 @@ button {
   #left{
     flex: 1;
   }
+  .repo-name h2 {
+    font-size: 21px;
+  }
+  
   
 }
 

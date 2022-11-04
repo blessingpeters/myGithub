@@ -38,7 +38,7 @@ function RepoPage() {
   return (
     <div className="repo-page">
       
-      <div className="flex ">
+      <div className="repo">
         <h1>Name: {repo.name}</h1>
         <p>Fork: {repo.forks}</p>
         <p>Fork: {repo.language}</p>
@@ -48,7 +48,7 @@ function RepoPage() {
         <p>open issues : {repo.open_issues}</p>
         <p>created_at : {repo.created_at}</p>
         
-        <div className="">
+        <div className="btn-cont flex">
         
           <a className="repo-items" target="_blank" rel="noreferrer" href={repo.html_url}>
             View on Github

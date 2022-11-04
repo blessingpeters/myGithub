@@ -30,9 +30,9 @@ function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
   return (
     <div>
       <section className="pagination">
-        <div className={disabledPrev ? "disabled" : "prev"}>
+        <div onClick={prevPage} className={disabledPrev ? "disabled" : "prev"}>
           <LeftArrow />
-          <p onClick={prevPage}> Previous</p>
+          <p> Previous</p>
         </div>
         <div className="pagination-num flex">
           {pageNum.map((num) => (
@@ -46,8 +46,8 @@ function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
             </div>
           ))}
         </div>
-        <div className={disabledNext ? "disabled" : "next"}>
-          <p onClick={nextPage}>Next </p>
+        <div onClick={nextPage} className={disabledNext ? "disabled" : "next"}>
+          <p>Next </p>
           <RightArrow />
         </div>
       </section>
