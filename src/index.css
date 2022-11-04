@@ -242,4 +242,12 @@ button {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
 
+  .repo-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .error-cont{
+    width: 90%;
+  }
+
 }

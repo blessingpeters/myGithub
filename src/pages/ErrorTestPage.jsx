@@ -1,6 +1,5 @@
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary'
-import Nav from "../components/Nav";
 import ErrorFallback from "../components/ErrorFallback";
 import Repos from "../components/Repos";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +21,6 @@ function ErrorTest (){
       navigate("/")
     }
     return (
-        
     
         <div className='error-cont repo'>
             <h1>Test for Error Boundary</h1>
@@ -33,11 +31,6 @@ function ErrorTest (){
 
             <button className="repo-items" onClick={goBack}>Back</button>
         </div>
-
-
-                
-            
-       
     )
 }
 export default ErrorTest
