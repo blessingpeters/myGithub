@@ -98,7 +98,16 @@ pre {
 .repo-items:nth-child(2n +4){
   background-color: rgba(163, 62, 61, 0.6);
 }
-
+.repo span {
+  margin-right: 5px;
+}
+.repo > a{
+  color: #002147;
+}
+.repo > a, .btn-cont a {
+  display: flex;
+  align-items: center;
+}
 
 .repo-page {
   width: 70%;
@@ -124,10 +133,6 @@ pre {
   padding: 10px 20px;
 }
 .btn-cont {
-  align-items: center;
-}
-.btn-cont a {
-  display: flex;
   align-items: center;
 }
 .error-cont{

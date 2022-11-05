@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate} from "react-router-dom";
 import {ReactComponent as Github} from "../assets/GithubLogo.svg";
+import { ReactComponent as Link} from "../assets/link.svg";
 
 function RepoPage() {
   const { id } = useParams();
@@ -41,6 +42,7 @@ function RepoPage() {
       
       <div className="repo">
         <h2>Name: {repo.name}</h2>
+        <a target="_blank" rel="noreferrer" href={repo.homepage}><span><Link /></span>{repo.homepage}</a>
 
         <h3>Stats</h3>
         <div className="repo-page-deets">
