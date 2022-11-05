@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate} from "react-router-dom";
 import {ReactComponent as Github} from "../assets/GithubLogo.svg";
 import { ReactComponent as Link} from "../assets/link.svg";
+import {ReactComponent as Loader} from "../assets/loader.svg";
 
 function RepoPage() {
   const { id } = useParams();
@@ -34,7 +35,7 @@ function RepoPage() {
     setLoading(false);
   };
 
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <div className="loader" ><Loader className="load" /></div>;
   
 
   return (

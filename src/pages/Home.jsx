@@ -4,6 +4,7 @@ import Pagination from "../components/Pagination";
 import Repos from "../components/Repos";
 import GithubProfile from "../components/GithubProfile";
 import Nav from "../components/Nav";
+import {ReactComponent as Loader} from "../assets/loader.svg";
 
 function Home(){
     const [user, setUser] = useState({});
@@ -47,7 +48,7 @@ function Home(){
     setLoading(false);
   };
 
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <div className="loader" ><Loader className="load" /></div>;
 
   // Pagination logic
   const indexOfLastNumber = currentPage * repoPerPage;

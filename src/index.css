@@ -39,6 +39,18 @@ pre {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.loader{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load{
+  width: 50px;
+  height: 50px;
+}
+
 .menu {
   color: #002147;
   margin-left:  25px;
@@ -194,7 +206,7 @@ pre {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .pagination-child,
@@ -292,5 +304,12 @@ pre {
   }
   .w-2{
     grid-column: span 2;
+  }
+  .prev p, .next p {
+    margin: 0 10px;
+    display: none;
+  }
+  .disabled > p {
+    display: none;
   }
 }
