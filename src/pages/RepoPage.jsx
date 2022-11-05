@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate} from "react-router-dom";
+import {ReactComponent as Github} from "../assets/GithubLogo.svg";
 
 function RepoPage() {
   const { id } = useParams();
@@ -39,19 +40,27 @@ function RepoPage() {
     <div className="repo-page">
       
       <div className="repo">
-        <h1>Name: {repo.name}</h1>
-        <p>Fork: {repo.forks}</p>
-        <p>Fork: {repo.language}</p>
-        <p>File Size: {repo.size}kb</p>
-        <p>visibility : {repo.visibility}</p>
-        <p>watchers : {repo.watchers}</p>
-        <p>open issues : {repo.open_issues}</p>
-        <p>created_at : {repo.created_at}</p>
-        
+        <h2>Name: {repo.name}</h2>
+
+        <h3>Stats</h3>
+        <div className="repo-page-deets">
+          <p className="repo-page-items">Branch: {repo.default_branch}</p>
+          <p className="repo-page-items">Fork: {repo.forks}</p>
+          <p className="repo-page-items">Language: {repo.language}</p>
+          <p className="repo-page-items">Stars: {repo.stargazers_count}</p>
+          <p className="repo-page-items">Watchers: {repo.watchers}</p>
+          <p className="repo-page-items">File Size: {repo.size}kb</p>
+          <p className="repo-page-items">Visibility : {repo.visibility}</p>
+          <p className="repo-page-items">Open Issues : {repo.open_issues}</p>
+          <p className="repo-page-items w-2">Created_at : {repo.created_at}</p>
+
+        </div>
+
         <div className="btn-cont flex">
         
           <a className="repo-items" target="_blank" rel="noreferrer" href={repo.html_url}>
-            View on Github
+            
+            View on Github<Github />
           </a>
           <button className="repo-items" onClick={goBack}>Back</button>
         </div>

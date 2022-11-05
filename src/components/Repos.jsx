@@ -8,7 +8,7 @@ function Repos({currentRepo}){
     return(
         <div className="repo-container">
             {currentRepo.map((repo) => (
-                <Link key={repo.id} className="repo flex" to={`repo/${repo.name}`}> 
+                <Link key={repo.id} className="repo flex hover" to={`repo/${repo.name}`}> 
                    
                     <div className="repo-header">
                         <div className="flex repo-name"> 
