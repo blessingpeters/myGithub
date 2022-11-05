@@ -38,7 +38,7 @@ function GithubProfile ({profile}){
             </div>
             <div className="profile-details">
               <Following />
-              <p>  Followers: {profile.following}</p>
+              <p>  Following: {profile.following}</p>
             </div>
         
           </div>
