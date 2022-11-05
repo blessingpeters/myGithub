@@ -103,6 +103,7 @@ pre {
 }
 .repo > a{
   color: #002147;
+  text-decoration: double underline;
 }
 .repo > a, .btn-cont a {
   display: flex;

@@ -31,7 +31,6 @@ function Home(){
       });
       const data = await response.json();
       setUser(data);
-      console.log(data)
       setLoading(false);
     };
 
@@ -45,7 +44,6 @@ function Home(){
     });
     const data = await response.json();
     setRepos(data);
-    console.log(data)
     setLoading(false);
   };
 

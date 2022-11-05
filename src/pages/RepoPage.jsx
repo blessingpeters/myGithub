@@ -42,7 +42,7 @@ function RepoPage() {
       
       <div className="repo">
         <h2>Name: {repo.name}</h2>
-        <a target="_blank" rel="noreferrer" href={repo.homepage}><span><Link /></span>{repo.homepage}</a>
+        <a target="_blank" rel="noreferrer" href={repo.homepage}><span><Link /></span>View Site</a>
 
         <h3>Stats</h3>
         <div className="repo-page-deets">
