@@ -1,0 +1,3 @@
+https://my-github-ble-syn.vercel.app/
+https://my-github-ble-syn.vercel.app/errortestpage
+https://my-github-ble-syn.vercel.app/repo/ble-syn
