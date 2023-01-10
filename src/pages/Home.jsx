@@ -12,6 +12,7 @@ function Home(){
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
     const [repoPerPage] = useState(4);
+    const [search, setSearch]= useState([])
 
   const location = useLocation();
 
@@ -48,6 +49,39 @@ function Home(){
     setLoading(false);
   };
 
+  // NEW FEATURE: Searching for Other GitHub Users
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    if (search === "") return;
+    await handleSearchUser();
+    await handleSearchRepo();
+  };
+
+  const handleSearchUser = async () => {
+    const response = await fetch(`${url}/users/${search}`, {
+      headers: {
+        Authorization: `token ${token}`,
+      },
+    });
+    const data = await response.json();
+    setUser(data);
+    setLoading(false);
+  };
+
+  const handleSearchRepo = async () => {
+    const response = await fetch(`${url}/users/${search}/repos`, {
+      headers: {
+        Authorization: `token ${token}`,
+      },
+    });
+
+    const data = await response.json();
+    setRepos(data);
+    setLoading(false);
+    console.log(data);
+  };
+
+
   if (loading) return <div className="loader" ><Loader className="load" /></div>;
 
   // Pagination logic
@@ -58,7 +92,11 @@ function Home(){
 
     return (
         <div className="container">
-            <Nav />
+            <Nav
+              handleSearch={handleSearch} 
+              search={search} 
+              setSearch={setSearch}
+            />
           {location.pathname === "/" ? (
           <div className="main flex">
             <div id="left">

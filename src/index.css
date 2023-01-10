@@ -50,7 +50,23 @@ pre {
   width: 50px;
   height: 50px;
 }
-
+form{ 
+  flex: 2;
+  text-align: center;
+}
+.search-input {
+  width: 50%;
+  padding: 10px;
+}
+.search-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius:0 10px 10px 0;
+}
+.btn-arrow{
+  display: none;
+}
 .menu {
   color: #002147;
   margin-left:  25px;
@@ -273,8 +289,22 @@ pre {
   nav {
     justify-content: center;
   }
-  .menu {
+  .search-input {
+    width: 70%;
+    padding: 10px;
 
+  }
+  .search-btn {
+    width: 10%;
+    
+  }
+  .search-btn p{
+    display: none;
+  }
+  .btn-arrow{
+    display: inline;
+  }
+  .menu {
     margin-left: 7px ;
   }
   .main{
