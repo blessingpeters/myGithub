@@ -26,7 +26,7 @@ function Home(){
   
     // fetching MY PROFILE
     const getProfile = async () => {
-      const response = await fetch(`${url}/users/ble-syn`, {
+      const response = await fetch(`${url}/users/blesssingpeters`, {
         headers: {
           Authorization: `token ${token}`,
         },
@@ -39,7 +39,7 @@ function Home(){
   // fetching MY REPOS 
   const getRepo = async () => {
     
-    const response = await fetch(`${url}/users/ble-syn/repos`, {
+    const response = await fetch(`${url}/users/blessingpeters/repos`, {
       headers: {
         Authorization: `token ${token}`,
       },

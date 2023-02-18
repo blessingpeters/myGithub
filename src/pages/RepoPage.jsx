@@ -69,7 +69,7 @@ function RepoPage() {
         </div>
       
       </div>
-    </div>
+    </div> 
   );
 }
 
