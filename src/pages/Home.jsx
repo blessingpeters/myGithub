@@ -26,7 +26,7 @@ function Home(){
   
     // fetching MY PROFILE
     const getProfile = async () => {
-      const response = await fetch(`${url}/users/blesssingpeters`, {
+      const response = await fetch(`${url}/users/blessingpeters`, {
         headers: {
           Authorization: `token ${token}`,
         },
